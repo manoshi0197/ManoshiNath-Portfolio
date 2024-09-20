@@ -62,7 +62,7 @@ const projects = [
     title: "This website",
     description: "My personal website",
     image: "/assets/portfolio.webm",
-    href: "https://github.com/wendoj/portfolio",
+    href: "https://manoshi0197.github.io/ManoshiNath-Portfolio/",
   },
 ];
 
@@ -206,7 +206,7 @@ export default function Home() {
                   <br />
                 </span>
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
-                  WendoJ.
+                  Manoshi Nath.
                 </span>
               </h1>
               <p
@@ -225,7 +225,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Link href="mailto:wendoj@proton.me" passHref>
+              <Link href="mailto:manoshinath17@gmail.com" passHref>
                 <Button>
                   Get in touch <ChevronRight className="ml-1 h-4 w-4" />
                 </Button>
@@ -446,7 +446,7 @@ export default function Home() {
               I&apos;m currently available for freelance work and open to
               discussing new projects.
             </p>
-            <Link href="mailto:wendoj@proton.me" passHref>
+            <Link href="mailto:manoshinath17@gmail.com" passHref>
               <Button className="mt-6">Get in touch</Button>
             </Link>
           </div>
