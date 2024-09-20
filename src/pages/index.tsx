@@ -62,7 +62,7 @@ const projects = [
     title: "This website",
     description: "My personal website",
     image: "/assets/portfolio.webm",
-    href: "https://manoshi0197.github.io/ManoshiNath-Portfolio/",
+    href: "https://github.com/wendoj/portfolio",
   },
 ];
 
