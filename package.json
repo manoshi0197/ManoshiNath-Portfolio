@@ -11,9 +11,7 @@
     "type-check": "tsc --noEmit",
     "format": "prettier --write ./src/**/*.{ts,tsx,js,jsx,json,md}",
     "start": "next start",
-    "build": "next build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d .next"  
+    "build": "next build"
   },
   "dependencies": {
     "@motionone/utils": "^10.17.0",

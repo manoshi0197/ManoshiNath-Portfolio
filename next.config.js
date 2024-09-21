@@ -31,4 +31,5 @@ const config = withPWA({
   },
 });
 
+
 export default config;
