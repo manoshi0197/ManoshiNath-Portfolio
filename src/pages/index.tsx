@@ -38,19 +38,19 @@ const projects = [
   {
     title: "Node-Rest-API",
     description: "Creating APIs using Node.js and Mongodb as database",
-    image: "/assets/unqueue.webm",
+    image: "/assets/arrows.webm",
     href: "https://github.com/manoshi0197/NODE-REST-API",
   },
   {
     title: "Blood Donation Web Application",
     description: "Order Blood from blood banks",
-    image: "/assets/infinitevps.webm",
+    image: "/assets/ambulance.webm",
     href: "https://github.com/manoshi0197/bloodDonation",
   },
   {
     title: "Chatbot",
-    description: "Powerful Multilingual Translation Bot for Discord",
-    image: "/assets/translate_bot.webm",
+    description: "Covid chatbot using Spyder as platform",
+    image: "/assets/bot.webm",
     href: "https://github.com/manoshi0197/ChatBot",
   },
   {
@@ -440,7 +440,7 @@ export default function Home() {
               <span className="text-gradient clash-grotesk">together.</span>
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I&apos;m currently available for Full time, part time, contract based opportunities and open to
+              I&apos;m currently available for full time, part time, contract based opportunities and open to
               discussing new projects.
             </p>
             <Link href="mailto:manoshinath17@gmail.com" passHref>
