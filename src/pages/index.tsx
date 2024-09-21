@@ -9,8 +9,9 @@ import {
   SearchCheck,
   Eye,
   MonitorSmartphone,
+  LucideEyeOff,
 } from "lucide-react";
-import { TriangleDownIcon } from "@radix-ui/react-icons";
+import { PaperPlaneIcon, TriangleDownIcon } from "@radix-ui/react-icons";
 import Spline from "@splinetool/react-spline";
 import Link from "next/link";
 import { cn, scrollTo } from "@/lib/utils";
@@ -30,39 +31,33 @@ import { motion } from "framer-motion";
 const aboutStats = [
   { label: "Years of experience", value: "3+" },
   { label: "Technologies mastered", value: "5+" },
-  { label: "Companies worked with", value: "15+" },
+  { label: "Companies worked with", value: "1" },
 ];
 
 const projects = [
   {
-    title: "Unqueue",
-    description: "E-commerce platform for selling digital products",
+    title: "Node-Rest-API",
+    description: "Creating APIs using Node.js and Mongodb as database",
     image: "/assets/unqueue.webm",
-    href: "https://unqueue.shop/",
+    href: "https://github.com/manoshi0197/NODE-REST-API",
   },
   {
-    title: "InfiniteVPS",
-    description: "High performance VPS hosting solution",
+    title: "Blood Donation Web Application",
+    description: "Order Blood from blood banks",
     image: "/assets/infinitevps.webm",
-    href: "#",
+    href: "https://github.com/manoshi0197/bloodDonation",
   },
   {
-    title: "TranslateBot",
+    title: "Chatbot",
     description: "Powerful Multilingual Translation Bot for Discord",
     image: "/assets/translate_bot.webm",
-    href: "https://translatebot.app/",
-  },
-  {
-    title: "Wrona",
-    description: "Robotics-focused technology company",
-    image: "/assets/wrona.jpeg",
-    href: "https://www.wrona.com/",
+    href: "https://github.com/manoshi0197/ChatBot",
   },
   {
     title: "This website",
     description: "My personal website",
     image: "/assets/portfolio.webm",
-    href: "https://github.com/wendoj/portfolio",
+    href: "https://github.com/manoshi0197/ManoshiNath-Portfolio",
   },
 ];
 
@@ -74,28 +69,28 @@ const services = [
     icon: Code2,
   },
   {
-    service: "UX Design",
-    description:
-      "Building intuitive, user-centric designs that drive engagement and conversion.",
-    icon: Frame,
-  },
-  {
-    service: "SEO Optimization",
-    description:
-      "Enhancing your website's visibility in search engines for increased organic traffic.",
-    icon: SearchCheck,
-  },
-  {
     service: "Responsive Design",
     description:
       "Designing websites that look and perform equally well on all devices and screen sizes.",
     icon: MonitorSmartphone,
   },
   {
+    service: "Unit testing",
+    description:
+      "Enhancing software reliability by testing individual components and meet specifications.",
+    icon: SearchCheck,
+  },
+  {
     service: "Backend Development",
     description:
       "Developing robust, scalable server-side logic for a wide range of web applications.",
     icon: Eye,
+  },
+  {
+  service: "Agile Methedology",
+    description:
+      "Collaborating in cross-functional teams to deliver high-quality software and continuous feedback.",
+    icon: PaperPlaneIcon,
   },
 ];
 
@@ -189,7 +184,7 @@ export default function Home() {
               data-scroll-direction="horizontal"
               data-scroll-speed=".09"
               className="flex flex-row items-center space-x-1.5"
-            >
+            > <span className={styles.pill}>Developed this website using:</span>
               <span className={styles.pill}>next.js</span>
               <span className={styles.pill}>tailwindcss</span>
               <span className={styles.pill}>typescript</span>
@@ -215,8 +210,9 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-                An experienced full-stack website developer with a passion for
-                crafting unique digital experiences.
+                "I’m proactive and love learning new skills. For example, when my team needed a solution for containerization, 
+                I took the initiative to learn Docker and successfully deployed our application in a scalable containerized environment. 
+                This skill has been extremely beneficial in reducing deployment times."
               </p>
             </div>
             <span
@@ -275,10 +271,10 @@ export default function Home() {
                 target="_blank"
                 className="underline"
               >
-                TypeScript, Tailwind, and Next.js
+                JAVA, Javascript, Typescript and it's tools and frameworks
               </Link>{" "}
-              since 2021. My experience spans from startups to mid-sized
-              companies, where I&apos;ve been instrumental in the entire product
+              since 2019. My experience spans from internships to mid-sized
+              companies, where I&apos;ve been instrumental in the entire web application
               design process; from ideation and wireframing, through
               prototyping, to the delivery of the final product, all while
               efficiently collaborating with cross-functional teams.
@@ -333,9 +329,9 @@ export default function Home() {
             {/* Carousel */}
             <div className="mt-14">
               <Carousel setApi={setCarouselApi} className="w-full">
-                <CarouselContent>
+                <CarouselContent className="flex flex-wrap">
                   {projects.map((project) => (
-                    <CarouselItem key={project.title} className="md:basis-1/2">
+                    <CarouselItem key={project.title} className="md:basis-1/3 w-full p-4">
                       <Card id="tilt">
                         <CardHeader className="p-0">
                           <Link href={project.href} target="_blank" passHref>
@@ -352,7 +348,7 @@ export default function Home() {
                                 src={project.image}
                                 alt={project.title}
                                 width={600}
-                                height={300}
+                                height={900}
                                 quality={100}
                                 className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
                               />
@@ -381,6 +377,7 @@ export default function Home() {
           </div>
         </section>
 
+
         {/* Services */}
         <section id="services" data-scroll-section>
           <div
@@ -408,7 +405,7 @@ export default function Home() {
                   </span>
                 </h2>
                 <p className="mt-2 tracking-tighter text-secondary-foreground">
-                  Here are some of the services I offer. If you have any
+                Here are some areas of my expertise. If you have any
                   questions, feel free to reach out.
                 </p>
               </div>
@@ -443,7 +440,7 @@ export default function Home() {
               <span className="text-gradient clash-grotesk">together.</span>
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I&apos;m currently available for freelance work and open to
+              I&apos;m currently available for Full time, part time, contract based opportunities and open to
               discussing new projects.
             </p>
             <Link href="mailto:manoshinath17@gmail.com" passHref>
